@@ -45,7 +45,7 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHol
                 .load(uploadCurrent.getImageUrl())
                 .placeholder(R.drawable.placeholder)
                 .error(R.drawable.error)
-                .fitCenter()
+                .override(800,800)
                 .centerCrop()
                 .transition(DrawableTransitionOptions.withCrossFade(300))
                 .into(holder.imageView);
